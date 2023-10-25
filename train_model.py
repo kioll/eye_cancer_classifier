@@ -18,9 +18,9 @@ data_test['ID'] = data_test['ID'].apply(lambda x: str(x) + '.png')
 data_evaluation['ID'] = data_evaluation['ID'].apply(lambda x: str(x) + '.png')
 
 # Générer les chemins complets vers les images pour l'ensemble d'entraînement, de test et d'évaluation
-image_paths_train = [os.path.join(image_folder, filename) for filename in data_train['ID'].values]
-image_paths_test = [os.path.join(image_folder, filename) for filename in data_test['ID'].values]
-image_paths_evaluation = [os.path.join(image_folder, filename) for filename in data_evaluation['ID'].values]
+image_paths_train = [os.path.join(image_folder_train, filename) for filename in data_train['ID'].values]
+image_paths_test = [os.path.join(image_folder_eval, filename) for filename in data_test['ID'].values]
+image_paths_evaluation = [os.path.join(image_folder_test, filename) for filename in data_evaluation['ID'].values]
 
 # Fonction pour prétraiter les images
 def preprocess_images(image_paths, image_dimensions=(224, 224)):
