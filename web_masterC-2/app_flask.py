@@ -36,4 +36,4 @@ def result():
     return render_template('result.html', data=data, image_filename=image_filename)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
