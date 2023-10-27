@@ -14,4 +14,6 @@ Once you did that, you need to click on the button 'Analyze your eye' to see if 
 
 Now you can see if a have a disease or not and which one !
 
+IMPORTANT : if you want to run locally, you need to run the app_flask_local.py
+
 
