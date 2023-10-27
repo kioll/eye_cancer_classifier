@@ -2,3 +2,4 @@ flask==2.3.2
 Pillow
 tensorflow
 numpy
+werkzeug.utils
