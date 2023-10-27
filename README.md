@@ -1,19 +1,17 @@
-# eye_cancer_classifier
+# Analyse de la Maladie Oculaire avec des Images (Ocula)
 
-In order to analyse if you have a disease you need to install some libraries :
-- pip install flask
-- pip install pillow
-etc ...
+Pour analyser si vous avez une maladie oculaire, vous devez installer certaines bibliothèques. Vous pouvez les installer en utilisant la commande pip :
+pip install flask
+pip install pillow
 
-(You need to install all the libraries in the file requirement.txt)
+# Ajoutez toutes les bibliothèques répertoriées dans le fichier requirements.txt
 
-How use our solution ?
+Comment Utiliser Notre Solution ?
 
-First you need to upload a png file (png of your eye) with the button upload on the application.
-Once you did that, you need to click on the button 'Analyze your eye' to see if you have a disease and which one.
+- Tout d'abord, vous devez télécharger une image au format PNG de votre œil en utilisant le bouton "Télécharger" de l'application.
+- Une fois que vous avez téléchargé l'image, cliquez sur le bouton "Analyser votre œil" pour déterminer si vous avez une maladie oculaire et laquelle.
+Vous pourrez ainsi savoir si vous avez une maladie oculaire et quelle est la nature de cette maladie.
 
-Now you can see if a have a disease or not and which one !
+# REMARQUE IMPORTANTE : Si vous souhaitez exécuter l'application localement, vous devrez exécuter le fichier "app_flask_local.py".
 
-IMPORTANT : if you want to run locally, you need to run the app_flask_local.py
-
-
+L'objectif de notre projet est de permettre aux utilisateurs de télécharger une image au format PNG de leur œil pour déterminer s'ils ont une maladie oculaire et, le cas échéant, de quel type de maladie il s'agit. Le code que vous avez fourni semble utiliser des bibliothèques liées à l'apprentissage automatique et à l'analyse d'images pour réaliser cette tâche.
