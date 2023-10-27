@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MoodIT - Eye Analysis Result</title>
-    <link href="../static/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__container">
+<head>
+    <title>Ocula - Result</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+<style>
+    
+
+</style>
+<body>
+<header class="header">
+    <div class="header__container">
         <div class="header__logo">
-          <a class="logo-link" href="/">
-            <img src="" alt="" class="">
-          </a>
+            <a class="logo-link" href="/">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-image">
+            </a>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <section class="result-section">
-      <h1 class="result__title">
-        Eye Analysis Result
-      </h1>
-      <div class="result__container">
-        <div class="result__content">
-          <h2>Analysis Result:</h2>
-          <!-- Utilize the "image_filename" variable to display the image -->
-          <img id="uploadedImage" src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Eye Photo">
-          <p class="success-message">Eye Analysis Successful!</p>
-        </div>
-      </div>
-    </section>
+<section class="result-section">
+    <h1 class="result__title">
+        Résultat de la prédiction
+    </h1>
+   
 
-    <footer class="footer">
-      <div class="footer__container">
+    <h1>Résultats de la prédiction</h1>
+    <p>Les deux classes les plus probables sont : {{ labels_significations[top_classes[0]] }} et {{ labels_significations[top_classes[1]] }}</p>
+    <p>Probabilité de {{ labels_significations[top_classes[0]] }} : {{ '%0.2f'|format(top_probabilities[0] * 100) }}%</p>
+    <p>Probabilité de {{ labels_significations[top_classes[1]] }} : {{ '%0.2f'|format(top_probabilities[1] * 100) }}%</p>
+    
+    
+
+   
+</section>
+
+
+<footer class="footer">
+    <div class="footer__container">
         <div class="footer__logo">
-          <img src="" alt="" class="">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="footer__logo-image">
         </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</footer>
+</body>
 </html>
