@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY') or os.urandom(24)
 
-MODEL_PATH = './web_masterC-2-1/model1.hdf5'
+MODEL_PATH = './web_masterC-2-1/my_model_ml.hdf5'
 model = tf.keras.models.load_model(MODEL_PATH)
 
 
