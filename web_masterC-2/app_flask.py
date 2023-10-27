@@ -141,4 +141,4 @@ def results():
     return jsonify({'erreur': 'Format de données non pris en charge'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(0.0.0.0)
